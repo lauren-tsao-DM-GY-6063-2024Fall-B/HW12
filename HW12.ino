@@ -2,6 +2,7 @@ int nClicks;
 int pv2;
 bool led12On = false;
 bool led11On = false;
+bool led10On = false;
 
 void setup() {
   pinMode(12, OUTPUT);
@@ -48,9 +49,10 @@ void loop() {
 
 if (a0In == 0) {
     digitalWrite(11, HIGH);  // Turn on pin 11 (LED)
-    Serial.println("Pin 11 UNLOCKED!");
+    Serial.println("Pin 11 UNLOCKED!");  // Print message for feedback
+    led11On = true;  // Set the LED status to "on"
   } else {
-    digitalWrite(11, LOW);  // Turn off pin 11 if the value is not 0
+    led11On = false;  // Keep track of pin 11 state
   }
 
   delay(100);
@@ -64,14 +66,31 @@ int a1In = analogRead(A1);
 
   if (a1In >= 1000 && a1In < 2000) {
     digitalWrite(10, HIGH);  // Turn on pin 10 (LED)
-    Serial.println("Pin 10 UNLOCKED!");
+    Serial.println("Pin 10 UNLOCKED!");  // Print message for feedback
+    led10On = true;  // Set the LED status to "on"
   } else {
-    digitalWrite(10, LOW);  // Turn off pin 10 if the value is less than 1010
+    led10On = false;  // Keep track of pin 10 state
   }
 
   delay(100);
 
 
-  
 
+ // Check if all LEDs are on (button, photosensor, rotary)
+  if (led12On && led11On && led10On) {
+    // Blink the LEDs forever
+    while (true) {  // Infinite loop
+      // Turn on all LEDs
+      digitalWrite(12, HIGH);
+      digitalWrite(11, HIGH);
+      digitalWrite(10, HIGH);
+      delay(500);  // Wait for half a second
+
+      // Turn off all LEDs
+      digitalWrite(12, LOW);
+      digitalWrite(11, LOW);
+      digitalWrite(10, LOW);
+      delay(500);  // Wait for half a second
+    }
+  }
 }
