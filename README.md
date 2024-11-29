@@ -2,7 +2,7 @@
 
 ### Steps to Unlock
 - First step: Turn rotary potentiometer until the value on the Serial Monitor reads between 1000 and 2000.
-- If done correctly, the LED on D1O will light up and "Pin 10 UNLOCKED!" will display on the Serial Monitor.
+- If done correctly, the LED on D10 will light up and "Pin 10 UNLOCKED!" will display on the Serial Monitor.
 - Second step: Press button 5 times.
 - If done correctly, the LED on D12 will light up and "Pin 12 UNLOCKED!" will display on the Serial Monitor.
 - Third step: Photoresistor's value on the Serial Monitor must read 0.
