@@ -1,6 +1,6 @@
 ## Creative Coding (DM-GY 6063) - Programming: Week 12
 
-### Steps to unlock!
+### Steps to Unlock
 - First step: Turn rotary potentiometer until the value on the Serial Monitor reads between 1000 and 2000.
 - If done correctly, the LED on D1O will light up and "Pin 10 UNLOCKED!" will display on the Serial Monitor.
 - Second step: Press button 5 times.
