@@ -1,5 +1,9 @@
 ## Creative Coding (DM-GY 6063) - Programming: Week 12
 
+### Description of logic
+- I wanted to make a password that involves a different component for each step, similar to an obstacle course.
+- I also want it to provide strong visual feedback when a step is completed correctly and when the password is unlocked.
+
 ### Steps to Unlock
 - First step: Turn rotary potentiometer until the value on the Serial Monitor reads between 1000 and 2000.
 - If done correctly, the LED on D10 will light up and "Pin 10 UNLOCKED!" will display on the Serial Monitor.
