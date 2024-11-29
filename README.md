@@ -1,6 +1,6 @@
 ## Creative Coding (DM-GY 6063) - Programming: Week 12
 
-### Description of logic
+### Description of Logic
 - I wanted to make a password that involves a different component for each step, similar to an obstacle course.
 - I also want it to provide strong visual feedback when a step is completed correctly and when the password is unlocked.
 
